@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <style type="text/css">
+          
+    </style>  
+  </head>
+  <body>
+    <h2>Album Small</h2>
+    {% for item in items %}
+      <a href="picture.php?name={{item}}">
+        <img src="img/thumbs/{{ item }}">
+        
+      </a>
+    {% endfor %}
+  </body>
+</html>
