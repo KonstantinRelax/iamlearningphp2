@@ -1,0 +1,27 @@
+.good-wrapper{
+	display: inline-block;
+	width: 250px;
+	margin: 25px;
+	padding: 10px;
+	border: 1px solid black;
+}
+
+.title{
+
+}
+
+.describe{
+
+}
+
+.cost-wrapper{
+	bottom: 0;
+	text-align: right;
+}
+
+.cost{
+	font-weight: bold;
+	display: inline-block;
+	position: relative;
+	right: 0;
+}

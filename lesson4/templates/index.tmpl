@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>Goods</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <h2>Catalog</h2>
+      <div id="for-goods">
+        
+    {% for item in data %}
+        <div class='good-wrapper'>
+          <span class='title'>{{item.title}}</span>
+          <p class='describe'>{{item.good_info}}</p>
+          <div class='cost-wrapper'>
+            <span class='cost'>{{item.cost}}</span> 
+          </div>
+        </div>
+    {% endfor %}
+      </div>
+    <button id='more-goods'>Больше товаров!</button> 
+    
+
+    <script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script>
+
+      $('#more-goods').on('click', function(){
+        let count = document.getElementsByClassName('title').length;
+        
+        $.post('ajax.php', {start: count, end: 15}, 
+          function( data ) {
+            $('#for-goods').append(data);
+          }
+        );
+      })
+    </script>
+  </body>
+</html>
