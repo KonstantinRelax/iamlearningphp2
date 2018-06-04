@@ -1,0 +1,1 @@
+<?phpfunction text_get(){	return file_get_contents('data/text.txt');}function text_set($text){	file_put_contents('data/text.txt', $text);}function check_pass($login, $password){	/*тут мф проведем нормальную проверку, пока логин root, password=''*/	if (($login == 'root') && ($password == '')) {		return true;	} else {		return false;	}}

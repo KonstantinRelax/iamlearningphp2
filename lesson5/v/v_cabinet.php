@@ -1,0 +1,1 @@
+<?php/** * Шаблон редактора * ================ * $text - текст статьи */?><style>	#logout-btn{		display: inline-block;	}	#login-btn{		display: none;	}</style><h2>	Welcome to Cabinet!</h2><form action="index.php">	<input type="submit" value='Log Out'></form>
